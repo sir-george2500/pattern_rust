@@ -1,9 +1,10 @@
 mod grid;
 mod triangle;
+mod triangle_number;
 use grid::grid;
 use std::io;
 use triangle::trainage;
-
+use triangle_number::triangle_number;
 fn main() {
     println!("Enter the number to print your pattern");
     let mut input = String::new();
@@ -13,4 +14,5 @@ fn main() {
     let n: i32 = input.trim().parse().expect("Please enter a valid number");
     grid(n);
     trainage(n);
+    triangle_number(n);
 }
